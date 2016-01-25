@@ -1,0 +1,14 @@
+.container-portifolios-adm{
+	.container-portifolios{
+	    width: 22%;
+	    display: inline-block;
+	    padding: 5% 5% 0 5%;
+	    overflow: hidden;
+	    .portifolios-img{
+	    	width: 100%;
+	    }
+	    .portifolios-text{
+	    	height: 50%;
+	    }
+	}
+}

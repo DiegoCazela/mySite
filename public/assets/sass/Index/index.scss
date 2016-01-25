@@ -1,0 +1,112 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+    display: inline-table;
+	// div que engloba todo o conteudo do site
+	#container-body{
+		height: 100%;
+		width: 100%;
+		margin-top: 4%;
+		// div do lado esquerdo que engloba a foto e uma breve descricao
+		.navbar-default{
+			margin: 0;
+		}
+		#result-modal{
+			display: block;
+			position: absolute;
+		    top: 45%;
+		    left: 45%;
+		}
+		#container-left{
+			float: left;
+		    margin: 0;
+		    padding: 5%;
+			width: 30%;;
+		    height: 100%;
+		    background: #ccc;
+			.left-photo{
+				img {
+					width: 100px;
+				    height: 100px;
+				    margin: auto auto 10% auto;
+				    border-radius: 50%;
+				    background: red;
+				}
+			}
+			.left-characteristics{
+				text-align: justify;
+				h4{
+				    margin: 0;
+				    padding: 0;
+					line-height: 35px;
+				}
+			}
+		}
+		// div do lado direito que engloba a apresentacao, o curriculum, as habilidades, o portifolio e o contato
+		#container-right{
+			float: left;
+			width: 70%;
+			// div da apresentacao, div do curriculum, div das habilidades, div dos portifolios, div do contato
+			.right-presentation, .right-curriculum, .right-skills, .right-portifolios, .right-contacts{
+				padding: 5%;
+				.title{
+					text-align: center;
+					margin-bottom: 5%;
+					h2{
+						margin: 0;
+						padding: 0;
+					}
+				}
+				.text{
+				    line-height: 30px;
+	    			margin-bottom: 2%;
+					p{
+						margin: 0;
+						padding: 0;
+					}
+				}
+				.learnMore{
+					clear: both;
+				    width: 20%;
+				    border: 1px solid;
+				    border-radius: 6px;
+				    text-align: center;
+					p{
+						margin: 0;
+					    padding: 10%;
+					    display: block;
+					    cursor: pointer;
+					}
+				}
+			}
+			// div dos portifolios
+			.right-portifolios{
+				.container-portifolios{
+					.container-portifolios-part{
+						width: 50%;
+					    padding: 0 5% 5% 5%;
+					    float: left;
+					    text-align: center;
+						.portifolios-img{
+					        width: 70%;
+						    padding: 0;
+						    margin-bottom: 10%;
+						}
+						.portifolios-text{
+							text-align: justify;
+							p{
+								margin: 0;
+								padding: 0;
+							}
+						}
+					}
+				}
+				.learnMore{
+				    margin-left: 5%;
+				}
+			}
+		}
+	}
+}

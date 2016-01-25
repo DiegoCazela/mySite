@@ -1,0 +1,122 @@
+/* line 1, ../../sass/Index/index.scss */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: inline-table;
+}
+/* line 8, ../../sass/Index/index.scss */
+body #container-body {
+  height: 100%;
+  width: 100%;
+  margin-top: 4%;
+}
+/* line 13, ../../sass/Index/index.scss */
+body #container-body .navbar-default {
+  margin: 0;
+}
+/* line 16, ../../sass/Index/index.scss */
+body #container-body #result-modal {
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+/* line 22, ../../sass/Index/index.scss */
+body #container-body #container-left {
+  float: left;
+  margin: 0;
+  padding: 5%;
+  width: 30%;
+  height: 100%;
+  background: #ccc;
+}
+/* line 30, ../../sass/Index/index.scss */
+body #container-body #container-left .left-photo img {
+  width: 100px;
+  height: 100px;
+  margin: auto auto 10% auto;
+  border-radius: 50%;
+  background: red;
+}
+/* line 38, ../../sass/Index/index.scss */
+body #container-body #container-left .left-characteristics {
+  text-align: justify;
+}
+/* line 40, ../../sass/Index/index.scss */
+body #container-body #container-left .left-characteristics h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 35px;
+}
+/* line 48, ../../sass/Index/index.scss */
+body #container-body #container-right {
+  float: left;
+  width: 70%;
+}
+/* line 52, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation, body #container-body #container-right .right-curriculum, body #container-body #container-right .right-skills, body #container-body #container-right .right-portifolios, body #container-body #container-right .right-contacts {
+  padding: 5%;
+}
+/* line 54, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation .title, body #container-body #container-right .right-curriculum .title, body #container-body #container-right .right-skills .title, body #container-body #container-right .right-portifolios .title, body #container-body #container-right .right-contacts .title {
+  text-align: center;
+  margin-bottom: 5%;
+}
+/* line 57, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation .title h2, body #container-body #container-right .right-curriculum .title h2, body #container-body #container-right .right-skills .title h2, body #container-body #container-right .right-portifolios .title h2, body #container-body #container-right .right-contacts .title h2 {
+  margin: 0;
+  padding: 0;
+}
+/* line 62, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation .text, body #container-body #container-right .right-curriculum .text, body #container-body #container-right .right-skills .text, body #container-body #container-right .right-portifolios .text, body #container-body #container-right .right-contacts .text {
+  line-height: 30px;
+  margin-bottom: 2%;
+}
+/* line 65, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation .text p, body #container-body #container-right .right-curriculum .text p, body #container-body #container-right .right-skills .text p, body #container-body #container-right .right-portifolios .text p, body #container-body #container-right .right-contacts .text p {
+  margin: 0;
+  padding: 0;
+}
+/* line 70, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation .learnMore, body #container-body #container-right .right-curriculum .learnMore, body #container-body #container-right .right-skills .learnMore, body #container-body #container-right .right-portifolios .learnMore, body #container-body #container-right .right-contacts .learnMore {
+  clear: both;
+  width: 20%;
+  border: 1px solid;
+  border-radius: 6px;
+  text-align: center;
+}
+/* line 76, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation .learnMore p, body #container-body #container-right .right-curriculum .learnMore p, body #container-body #container-right .right-skills .learnMore p, body #container-body #container-right .right-portifolios .learnMore p, body #container-body #container-right .right-contacts .learnMore p {
+  margin: 0;
+  padding: 10%;
+  display: block;
+  cursor: pointer;
+}
+/* line 87, ../../sass/Index/index.scss */
+body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part {
+  width: 50%;
+  padding: 0 5% 5% 5%;
+  float: left;
+  text-align: center;
+}
+/* line 92, ../../sass/Index/index.scss */
+body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part .portifolios-img {
+  width: 70%;
+  padding: 0;
+  margin-bottom: 10%;
+}
+/* line 97, ../../sass/Index/index.scss */
+body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part .portifolios-text {
+  text-align: justify;
+}
+/* line 99, ../../sass/Index/index.scss */
+body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part .portifolios-text p {
+  margin: 0;
+  padding: 0;
+}
+/* line 106, ../../sass/Index/index.scss */
+body #container-body #container-right .right-portifolios .learnMore {
+  margin-left: 5%;
+}
