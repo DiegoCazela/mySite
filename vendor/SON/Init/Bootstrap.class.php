@@ -34,8 +34,8 @@ abstract class Bootstrap {
 					}
 					break;
 				}
-				case '/modal_login': {
-					if ($this->routes[$key]['route'] == '/modal_login') {
+				case '/user': {
+					if ($this->routes[$key]['route'] == '/user') {
 						require_once('../App/Controller/login.class.php');
 
 						$class = 'App\\Controller\\' . ucfirst($this->routes[$key]['controller']);

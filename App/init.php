@@ -10,7 +10,7 @@ class Init extends Bootstrap {
 	protected function iniRoutes() {
 		$ar[0] = array('route' => '/', 					'controller' => 'index', 			'action' => 'index');
 		$ar[1] = array('route' => '/users_login', 		'controller' => 'login', 			'action' => 'users_login');
-		$ar[2] = array('route' => '/modal_login', 		'controller' => 'login', 			'action' => 'modal_login');
+		$ar[2] = array('route' => '/user', 		'controller' => 'login', 			'action' => 'user');
 		$ar[3] = array('route' => '/characteristics', 	'controller' => 'adm_content', 		'action' => 'characteristics');
 		$ar[4] = array('route' => '/portifolio', 		'controller' => 'adm_content', 		'action' => 'portifolio');
 		$ar[5] = array('route' => '/photo', 			'controller' => 'adm_content', 		'action' => 'photo');

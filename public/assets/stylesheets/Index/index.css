@@ -24,6 +24,10 @@ body #container-body #result-modal {
   left: 45%;
 }
 /* line 22, ../../sass/Index/index.scss */
+body #container-body main {
+  height: 100%;
+}
+/* line 25, ../../sass/Index/index.scss */
 body #container-body #container-left {
   float: left;
   margin: 0;
@@ -32,7 +36,11 @@ body #container-body #container-left {
   height: 100%;
   background: #ccc;
 }
-/* line 30, ../../sass/Index/index.scss */
+/* line 32, ../../sass/Index/index.scss */
+body #container-body #container-left .left-photo {
+  text-align: center;
+}
+/* line 34, ../../sass/Index/index.scss */
 body #container-body #container-left .left-photo img {
   width: 100px;
   height: 100px;
@@ -40,46 +48,83 @@ body #container-body #container-left .left-photo img {
   border-radius: 50%;
   background: red;
 }
-/* line 38, ../../sass/Index/index.scss */
+/* line 42, ../../sass/Index/index.scss */
 body #container-body #container-left .left-characteristics {
   text-align: justify;
 }
-/* line 40, ../../sass/Index/index.scss */
+/* line 44, ../../sass/Index/index.scss */
 body #container-body #container-left .left-characteristics h4 {
   margin: 0;
   padding: 0;
   line-height: 35px;
 }
-/* line 48, ../../sass/Index/index.scss */
+/* line 52, ../../sass/Index/index.scss */
 body #container-body #container-right {
   float: left;
   width: 70%;
 }
-/* line 52, ../../sass/Index/index.scss */
+/* line 57, ../../sass/Index/index.scss */
+body #container-body #container-right .right-presentation .text .presentation-text, body #container-body #container-right .right-presentation .text .curriculum-text, body #container-body #container-right .right-curriculum .text .presentation-text, body #container-body #container-right .right-curriculum .text .curriculum-text {
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 68, ../../sass/Index/index.scss */
+body #container-body #container-right .right-skills .skills-text {
+  display: inline-block;
+  text-align: center;
+  margin: 4%;
+}
+/* line 73, ../../sass/Index/index.scss */
+body #container-body #container-right .right-skills .skills-text .estrelas label i.fa:before {
+  content: '\f005';
+  color: #FC0;
+}
+/* line 77, ../../sass/Index/index.scss */
+body #container-body #container-right .right-skills .skills-text .estrelas label i.fb {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+/* line 85, ../../sass/Index/index.scss */
+body #container-body #container-right .right-skills .skills-text .estrelas label i.fb:before {
+  content: '\f005';
+  color: #CCC;
+}
+/* line 95, ../../sass/Index/index.scss */
 body #container-body #container-right .right-presentation, body #container-body #container-right .right-curriculum, body #container-body #container-right .right-skills, body #container-body #container-right .right-portifolios, body #container-body #container-right .right-contacts {
   padding: 5%;
+  display: inline-block;
+  width: 100%;
 }
-/* line 54, ../../sass/Index/index.scss */
+/* line 99, ../../sass/Index/index.scss */
 body #container-body #container-right .right-presentation .title, body #container-body #container-right .right-curriculum .title, body #container-body #container-right .right-skills .title, body #container-body #container-right .right-portifolios .title, body #container-body #container-right .right-contacts .title {
   text-align: center;
   margin-bottom: 5%;
 }
-/* line 57, ../../sass/Index/index.scss */
+/* line 102, ../../sass/Index/index.scss */
 body #container-body #container-right .right-presentation .title h2, body #container-body #container-right .right-curriculum .title h2, body #container-body #container-right .right-skills .title h2, body #container-body #container-right .right-portifolios .title h2, body #container-body #container-right .right-contacts .title h2 {
   margin: 0;
   padding: 0;
 }
-/* line 62, ../../sass/Index/index.scss */
+/* line 107, ../../sass/Index/index.scss */
 body #container-body #container-right .right-presentation .text, body #container-body #container-right .right-curriculum .text, body #container-body #container-right .right-skills .text, body #container-body #container-right .right-portifolios .text, body #container-body #container-right .right-contacts .text {
   line-height: 30px;
   margin-bottom: 2%;
 }
-/* line 65, ../../sass/Index/index.scss */
+/* line 110, ../../sass/Index/index.scss */
 body #container-body #container-right .right-presentation .text p, body #container-body #container-right .right-curriculum .text p, body #container-body #container-right .right-skills .text p, body #container-body #container-right .right-portifolios .text p, body #container-body #container-right .right-contacts .text p {
   margin: 0;
   padding: 0;
 }
-/* line 70, ../../sass/Index/index.scss */
+/* line 115, ../../sass/Index/index.scss */
 body #container-body #container-right .right-presentation .learnMore, body #container-body #container-right .right-curriculum .learnMore, body #container-body #container-right .right-skills .learnMore, body #container-body #container-right .right-portifolios .learnMore, body #container-body #container-right .right-contacts .learnMore {
   clear: both;
   width: 20%;
@@ -87,36 +132,41 @@ body #container-body #container-right .right-presentation .learnMore, body #cont
   border-radius: 6px;
   text-align: center;
 }
-/* line 76, ../../sass/Index/index.scss */
+/* line 121, ../../sass/Index/index.scss */
 body #container-body #container-right .right-presentation .learnMore p, body #container-body #container-right .right-curriculum .learnMore p, body #container-body #container-right .right-skills .learnMore p, body #container-body #container-right .right-portifolios .learnMore p, body #container-body #container-right .right-contacts .learnMore p {
   margin: 0;
   padding: 10%;
   display: block;
   cursor: pointer;
 }
-/* line 87, ../../sass/Index/index.scss */
+/* line 130, ../../sass/Index/index.scss */
+body #container-body #container-right .right-portifolios {
+  display: inline-block;
+  width: 100%;
+}
+/* line 134, ../../sass/Index/index.scss */
 body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part {
   width: 50%;
   padding: 0 5% 5% 5%;
   float: left;
   text-align: center;
 }
-/* line 92, ../../sass/Index/index.scss */
+/* line 139, ../../sass/Index/index.scss */
 body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part .portifolios-img {
   width: 70%;
   padding: 0;
   margin-bottom: 10%;
 }
-/* line 97, ../../sass/Index/index.scss */
+/* line 144, ../../sass/Index/index.scss */
 body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part .portifolios-text {
   text-align: justify;
 }
-/* line 99, ../../sass/Index/index.scss */
+/* line 146, ../../sass/Index/index.scss */
 body #container-body #container-right .right-portifolios .container-portifolios .container-portifolios-part .portifolios-text p {
   margin: 0;
   padding: 0;
 }
-/* line 106, ../../sass/Index/index.scss */
+/* line 153, ../../sass/Index/index.scss */
 body #container-body #container-right .right-portifolios .learnMore {
   margin-left: 5%;
 }

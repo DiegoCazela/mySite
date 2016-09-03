@@ -15,7 +15,7 @@ use App\Model\UsersLogin;
 //controller que vai ser comparado a pasta dentro de App/View/pasta
 class Login extends Action {
 
-	public function modal_login() {
+	public function user() {
 		//manda renderizar
 		$this->render('modal_login.html');
 	}

@@ -1,14 +1,86 @@
 (function($) {
 	$(document).ready(function() {
-		$('#menu-user-login').on('click', function (e) {
-			if(!$('#form-modal').length || $('#result-modal').css('display') == 'none') {
-				if($('#result-modal').css('display') == 'none'){
-					$('#result-modal').css('display','block');
-				} else {
-					$('#result-modal').load('/modal_login');
-				}
+		// $('#menu-user-login').on('click', function (e) {
+		// 	if(!$('#form-modal').length || $('#result-modal').css('display') == 'none') {
+		// 		if($('#result-modal').css('display') == 'none'){
+		// 			$('#result-modal').css('display','block');
+		// 		} else {
+		// 			$('#result-modal').load('/user');
+		// 		}
+		// 	} else {
+		// 		$('#result-modal').css('display','none');
+		// 	}
+		// })
+
+		$('#right-presentation .learnMore').on('click', function (e) {
+			$('.presentation-text').toggleClass('ver-mais');
+			if($('.presentation-text').hasClass('ver-mais')) {
+				console.log('Ok');
+				$('#right-presentation .title, #right-presentation .learnMore').css({
+				    "opacity":"0"
+				}).animate({
+					opacity:1
+				},1000); 
+
+				$('.presentation-text.ver-mais').css({
+				    "opacity":"0",
+				    "display":"block"
+				}).animate({
+					opacity:1
+				},1000);    
+
+				$('#right-presentation .learnMore').html('<p>Fechar</p>');
 			} else {
-				$('#result-modal').css('display','none');
+				$('#right-presentation .title, #right-presentation .learnMore').css({
+				    "opacity":"0"
+				}).animate({
+					opacity:1
+				},1000); 
+
+				$('.presentation-text').css({
+				    "opacity":"0",
+				    "display":"-webkit-box"
+				}).animate({
+					opacity:1
+				},1000); 
+
+				$('#right-presentation .learnMore').html('<p>Ver Mais</p>');
+			}
+		})
+
+		$('#right-curriculum .learnMore').on('click', function (e) {
+			$('.curriculum-text').toggleClass('ver-mais');
+			if($('.curriculum-text').hasClass('ver-mais')) {
+				console.log('Ok');
+				$('#right-curriculum .title, #right-curriculum .learnMore').css({
+				    "opacity":"0"
+				}).animate({
+					opacity:1
+				},1000); 
+
+				$('.curriculum-text.ver-mais').css({
+				    "opacity":"0",
+				    "display":"block",
+				}).animate({
+					opacity:1
+				},1000);   
+
+				$('#right-curriculum .learnMore').html('<p>Fechar</p>');
+			} else {
+				$('#right-curriculum .title, #right-curriculum .learnMore').css({
+				    "opacity":"0"
+				}).animate({
+					opacity:1
+				},1000); 
+
+				$('.curriculum-text').css({
+				    "opacity":"0",
+				    "display":"-webkit-box"
+				}).animate({
+					opacity:1
+				},1000); 
+
+				$('#right-curriculum .learnMore').html('<p>Ver Mais</p>');
 			}
 		})
 	});
