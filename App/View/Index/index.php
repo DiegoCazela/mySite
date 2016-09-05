@@ -239,11 +239,11 @@
 									<?php
 										foreach ($selectPortifolio as $key => $value) :
 											//$contPortifolios = $key;
-											$content_portifolio_view = "<div class='container-portifolios-part'>";
+											$content_portifolio_view = "<article class='container-portifolios-part'>";
 
 											$content_portifolio_view .= "<img src='/assets/img/portifolio/" . $value->content_portifolios_name . "' alt='Smiley face' class='img-rounded portifolios-img'/>";
 											$content_portifolio_view .= "<div class='portifolios-text'><p>" . $value->content_portifolios_text . "</p></div>";
-											$content_portifolio_view .= "</div>";
+											$content_portifolio_view .= "</article>";
 											echo $content_portifolio_view;
 										endforeach;
 									?>
