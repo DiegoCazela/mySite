@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- estilo scss -->
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="assets/stylesheets/Index/index.css" rel="stylesheet" />
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
@@ -23,7 +23,7 @@
 		<div id="container-body">
 			<header>
 				<nav class="navbar navbar-default navbar-fixed-top">
-					<div class="container">
+					<!-- <div class="container"> -->
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<!-- <div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -38,7 +38,7 @@
 							<ul class="nav navbar-nav">
 								<li>
 									<a href="right-presentation">
-										Apresentacao
+										Apresentação
 									</a>
 								</li>
 								<li>
@@ -53,7 +53,7 @@
 								</li>
 								<li>
 									<a href="right-portifolios">
-										Portifolio
+										Portfólio
 									</a>
 								</li>
 								<li>
@@ -68,232 +68,225 @@
 								</li> -->
 							</ul>
 						<!-- </div> -->
-					</div>
+					<!-- </div> -->
 				</nav>
 			</header>
 
-			<section id="result-modal"></section>
+			<!-- <section id="result-modal"></section> -->
 
 			<!-- div do lado esquerdo que engloba a foto e uma breve descricao -->
 			<main>
-				<section id="container-left">
-					<div class="left-photo">
-						<?php 
-							// obtem a ultima foto passando o array como [0]
-							$content_photo_view .= "<img src='/assets/img/photo/" . $selectPhoto[0]->content_photo_name . "' alt='Smiley face' class='img-rounded photo-img'/>";
-							echo $content_photo_view;
-						?>
-					</div>
-					<div class="left-characteristics">
-						<h3>
-							<?php 
-								// obtem a ultima caracteristica passando o array como [0]
-								$content_characteristics_view .= "<div class='characteristics-text'><p>" . $selectCharacteristics[0]->content_characteristics . "</p></div>";
-								echo $content_characteristics_view;
-							?>
-						</h3>
-					</div>
-				</section>
-				<!-- div do lado direito que engloba a apresentacao, o curriculum, as habilidades, o portifolio e o contato -->
-				<section id="container-right">
-				<!-- div da apresentacao -->
-					<section id="right-presentation" class="right-presentation">
-						<div class="title">
-							<h1>
-								Apresentacao
-							</h1>
-						</div>
-						<div class="text">
-							<p>
-								<?php
-									// obtem a ultima caracteristica passando o array como [0]
-									$content_presentation_view .= "<div class='presentation-text'><p>" . $selectPresentation[0]->content_presentation . "</p></div>";
-									echo $content_presentation_view;
-								?>
-							</p>
-						</div>
-						<div class="learnMore">
-							<p>
-								Ver Mais
-							</p>
-						</div>
-					</section>
-					<!-- div do curriculum -->
-					<section id="right-curriculum" class="right-curriculum">
-						<div class="title">
-							<h1>
-								Curriculum vitae
-							</h1>
-						</div>
-						<div class="text">
-							<p>
-								<?php
-									// obtem a ultima caracteristica passando o array como [0]
-									$content_curriculum_view .= "<div class='curriculum-text'><p>" . $selectPresentation[0]->content_curriculum . "</p></div>";
-									echo $content_curriculum_view;
-								?>
-							</p>
-						</div>
-						<div class="learnMore">
-							<p>
-								Mussum ipsum
-							</p>
-						</div>
-					</section>
-					<!-- div das habilidades -->
-					<section id="right-skills" class="right-skills">
-						<div class="title">
-							<h1>
-								Habilidades
-							</h1>
-						</div>
-						<!-- <div class="basic-nivel">
-							<div class="text"> -->
-								<!-- <h4>Básico</h4> -->
+				<div class="container">
+					<div class="row">
+						<section id="container-left" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<section class="left-photo">
 								<?php 
-									foreach ($selectBasicSkills as $key => $value) :
-										$content_basic_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p>";
-										$content_basic_skills_view .= 
-											"<div class='estrelas'>".
-												"<label for='cm_star-1'>".
-													"<i class='fa'></i>".
-												"</label>".
-												"<label for='cm_star-2'>".
-													"<i class='fb'></i>".
-												"</label>".
-												"<label for='cm_star-3'>".
-													"<i class='fb'></i>".
-												"</label>".
-											"</div></div>";
-									endforeach;
-									echo $content_basic_skills_view;
+									// obtem a ultima foto passando o array como [0]
+									$content_photo_view .= "<img src='/assets/img/photo/" . $selectPhoto[0]->content_photo_name . "' alt='Smiley face' class='img-rounded photo-img'/>";
+									echo $content_photo_view;
 								?>
-							<!-- </div>
-						</div> -->
-						<!-- <div class="intermediate-nivel">
-							<div class="text"> -->
-								<!-- <h4>Intermediário</h4> -->
-								<?php 
-									foreach ($selectIntermediateSkills as $key => $value) :
-										$content_intermediate_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p>";
-										$content_intermediate_skills_view .= 
-											"<div class='estrelas'>".
-												"<label for='cm_star-1'>".
-													"<i class='fa'></i>".
-												"</label>".
-												"<label for='cm_star-2'>".
-													"<i class='fa'></i>".
-												"</label>".
-												"<label for='cm_star-3'>".
-													"<i class='fb'></i>".
-												"</label>".
-											"</div></div>";
-									endforeach;
-									echo $content_intermediate_skills_view;
-								?>
-							<!-- </div>
-						</div>
-						<div class="advanced-nivel">
-							<div class="text"> -->
-								<!-- <h4>Avancado</h4> -->
-								<?php 
-									foreach ($selectAdvancedSkills as $key => $value) :
-										$content_advanced_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p>";
-										$content_advanced_skills_view .= 
-											"<div class='estrelas'>".
-												"<label for='cm_star-1'>".
-													"<i class='fa'></i>".
-												"</label>".
-												"<label for='cm_star-2'>".
-													"<i class='fa'></i>".
-												"</label>".
-												"<label for='cm_star-3'>".
-													"<i class='fa'></i>".
-												"</label>".
-											"</div></div>";
-									endforeach;
-									echo $content_advanced_skills_view;
-								?>
-							<!-- </div>
-						</div> -->
-						<?php 
-							if(count($selectBasicSkills)+count($selectIntermediateSkills)+count($selectAdvancedSkills) > 16) { 
-						?>
-							<div class="learnMore">
-								<p>
-									Mussum ipsum
-								</p>
-							</div>
-						<?php
-							}
-						?>
+							</section>
+							<section class="left-characteristics">
+								<h3>
+									<?php 
+										// obtem a ultima caracteristica passando o array como [0]
+										$content_characteristics_view .= "<div class='characteristics-text'><p>" . $selectCharacteristics[0]->content_characteristics . "</p></div>";
+										echo $content_characteristics_view;
+									?>
+								</h3>
+							</section>
+						</section>
 
-					</section>
-					<!-- div dos portifolios -->
-					<section id="right-portifolios" class="right-portifolios">
-						<div class="title">
-							<h1>
-								Últimos Projetos
-							</h1>
-						</div>
-						<div class="container-portifolios">
-							<!-- projeto -->
-							<?php
-								foreach ($selectPortifolio as $key => $value) :
-									//$contPortifolios = $key;
-									$content_portifolio_view = "<div class='container-portifolios-part'>";
-									$content_portifolio_view .= "<img src='/assets/img/portifolio/" . $value->content_portifolios_name . "' alt='Smiley face' class='img-rounded portifolios-img'/>";
-									$content_portifolio_view .= "<div class='portifolios-text'><p>" . $value->content_portifolios_text . "</p></div>";
-									$content_portifolio_view .= "</div>";
-									echo $content_portifolio_view;
-								endforeach;
-							?>
-						</div>
-						<?php 
-							if(count($selectPortifolio) > 4) { 
-						?>
-								<div class="learnMore">
+					<!-- div do lado direito que engloba a apresentacao, o curriculum, as habilidades, o portifolio e o contato -->
+					<section id="container-right" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+						<!-- div da apresentacao -->
+							<section id="right-presentation" class="right-presentation">
+								<div class="title">
+									<h1>
+										Apresentação
+									</h1>
+								</div>
+								<div class="text">
 									<p>
-										Mussum ipsum
+										<?php
+											// obtem a ultima caracteristica passando o array como [0]
+											$content_presentation_view .= "<div class='presentation-text'><p>" . $selectPresentation[0]->content_presentation . "</p></div>";
+											echo $content_presentation_view;
+										?>
 									</p>
 								</div>
-						<?php
-							}
-						?>
-					</section>
-					<!-- div do contato -->
-					<section id="right-contacts" class="right-contacts">
-						<div class="title">
-							<h1>
-								Contatos
-							</h1>
-						</div>
-						<div class="contacts-fields">
-							<form id='form-contacts' method='post'>
-								<div class='container-name'>
-									<input required type="text" class="form-control form-name" name ="name" placeholder="Nome">
+								<div class="learnMore">
+									<p>
+										Ver Mais
+									</p>
 								</div>
-								<div class='container-email'>
-									<input required type="email" class="form-control form-email" name ="email" placeholder="Email">
+							</section>
+							<!-- div do curriculum -->
+							<section id="right-curriculum" class="right-curriculum">
+								<div class="title">
+									<h1>
+										Curriculum vitae
+									</h1>
 								</div>
-								<div class='container-phone'>
-									<input type="tel" class="form-control form-phone" name ="phone" placeholder="Telefone">
+								<div class="text">
+									<!-- <p> -->
+										<?php
+											// obtem a ultima caracteristica passando o array como [0]
+											$content_curriculum_view .= "<div class='curriculum-text'>" . $selectPresentation[0]->content_curriculum . "</div>";
+											echo $content_curriculum_view;
+										?>
+									<!-- </p> -->
 								</div>
-								<div class='container-message'>
-									<textarea required class="form-control form-message" name ="message" placeholder="Mensagem" rows=6 cols=40></textarea>
+								<!-- <div class="learnMore">
+								</div> -->
+								<div class="learnMore">
+									<p>
+										Ver Mais
+									</p>
 								</div>
-								<button type='submit' class='btn btn-default'>Submit</button>
-							</form>
-						</div>
-						<p><span class='glyphicon glyphicon-envelope'></span> cazela_dracena2005@hotmail.com</p>
-					</section>
-				</section>
+							</section>
+							<!-- div das habilidades -->
+							<section id="right-skills" class="right-skills">
+								<div class="title">
+									<h1>
+										Habilidades
+									</h1>
+								</div>
+								<!-- <div class="basic-nivel">
+									<div class="text"> -->
+										<!-- <h4>Básico</h4> -->
+										<?php 
+											foreach ($selectBasicSkills as $key => $value) :
+												$content_basic_skills_view .= "<div class='container-skills'>";
+												$content_basic_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
+												$content_basic_skills_view .= 
+													"<div class='skills-star'>".
+														"<label for='cm_star-1'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-2'>".
+															"<i class='fb'></i>".
+														"</label>".
+														"<label for='cm_star-3'>".
+															"<i class='fb'></i>".
+														"</label>".
+													"</div></div>";
+											endforeach;
+											echo $content_basic_skills_view;
+										?>
+									<!-- </div>
+								</div> -->
+								<!-- <div class="intermediate-nivel">
+									<div class="text"> -->
+										<!-- <h4>Intermediário</h4> -->
+										<?php 
+											foreach ($selectIntermediateSkills as $key => $value) :
+												$content_intermediate_skills_view .= "<div class='container-skills'>";
+												$content_intermediate_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
+												$content_intermediate_skills_view .= 
+													"<div class='skills-star'>".
+														"<label for='cm_star-1'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-2'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-3'>".
+															"<i class='fb'></i>".
+														"</label>".
+													"</div></div>";
+											endforeach;
+											echo $content_intermediate_skills_view;
+										?>
+									<!-- </div>
+								</div>
+								<div class="advanced-nivel">
+									<div class="text"> -->
+										<!-- <h4>Avancado</h4> -->
+										<?php 
+											foreach ($selectAdvancedSkills as $key => $value) :
+												$content_advanced_skills_view .= "<div class='container-skills'>";
+												$content_advanced_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
+												$content_advanced_skills_view .= 
+													"<div class='skills-star'>".
+														"<label for='cm_star-1'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-2'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-3'>".
+															"<i class='fa'></i>".
+														"</label>".
+													"</div></div>";
+											endforeach;
+											echo $content_advanced_skills_view;
+										?>
+									<!-- </div>
+								</div> -->
+
+							</section>
+							<!-- div dos portifolios -->
+							<section id="right-portifolios" class="right-portifolios">
+								<div class="title">
+									<h1>
+										<!-- Últimos Projetos -->
+										Portfólio
+									</h1>
+								</div>
+								<div class="container-portifolios">
+									<!-- projeto -->
+									<?php
+										foreach ($selectPortifolio as $key => $value) :
+											//$contPortifolios = $key;
+											$content_portifolio_view = "<div class='container-portifolios-part'>";
+
+											$content_portifolio_view .= "<img src='/assets/img/portifolio/" . $value->content_portifolios_name . "' alt='Smiley face' class='img-rounded portifolios-img'/>";
+											$content_portifolio_view .= "<div class='portifolios-text'><p>" . $value->content_portifolios_text . "</p></div>";
+											$content_portifolio_view .= "</div>";
+											echo $content_portifolio_view;
+										endforeach;
+									?>
+								</div>
+
+							</section>
+							<!-- div do contato -->
+							<section id="right-contacts" class="right-contacts">
+								<div class="title">
+									<h1>
+										Contatos
+									</h1>
+								</div>
+								<div class="contacts-fields">
+									<form id='form-contacts' method='post'>
+										<div class='container-name'>
+											<input required type="text" class="form-control form-name" name ="name" placeholder="Nome">
+										</div>
+										<div class='container-email'>
+											<input required type="email" class="form-control form-email" name ="email" placeholder="Email">
+										</div>
+										<div class='container-phone'>
+											<input type="tel" class="form-control form-phone" name ="phone" placeholder="Telefone">
+										</div>
+										<div class='container-message'>
+											<textarea required class="form-control form-message" name ="message" placeholder="Mensagem" rows=6 cols=40></textarea>
+										</div>
+										<button type='submit' class='btn btn-default'>Enviar</button>
+									</form>
+								</div>
+								<span class="container-myemail"><span class='glyphicon glyphicon-envelope'></span> cazela_dracena2005@hotmail.com</span>
+							</section>
+						</section>
+					</div>
+				</div>
 			</main>
 		</div>
 
 		<!-- js -->
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
