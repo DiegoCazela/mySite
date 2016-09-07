@@ -51,14 +51,14 @@
 					<div class="row">
 						<section id="container-left" class="col-xs-12 col-sm-4">
 							<div class="row">
-								<section class="left-photo col-xs-3">
+								<section class="left-photo col-xs-12 col-sm-3">
 									<?php 
 										// obtem a ultima foto passando o array como [0]
 										$content_photo_view .= "<img src='/assets/img/photo/" . $selectPhoto[0]->content_photo_name . "' alt='Smiley face' class='img-rounded photo-img'/>";
 										echo $content_photo_view;
 									?>
 								</section>
-								<section class="left-characteristics col-xs-3">
+								<section class="left-characteristics col-xs-12 col-sm-3">
 									<h3>
 										<?php 
 											// obtem a ultima caracteristica passando o array como [0]
