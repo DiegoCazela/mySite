@@ -12,111 +12,49 @@
 		// 	}
 		// })
 
-		var settings = {
+		//$(window).resize(function() {
+	  	if($(window).width() < 753) {
+		  	console.log('entrou');
+			$('.navbar-fixed-top ul.nav').find('a').click(function(){
+			    var $href = $(this).attr('href');
+			    var $anchor = $('#'+$href).offset();
+			    $anchor.top = $anchor.top - $(".navbar").height(); 
+			    $('body').animate({ scrollTop: $anchor.top });
+			    return false;
+			});	
+	  	}
+	//});
 
-		// Parallax background effect?
-			parallax: true,
+		if($(window).width() > 753) {
+			$('.navbar-fixed-top ul.nav').find('a').click(function(){
+			    var $href = $(this).attr('href');
+			    var $anchor = $('#'+$href).offset(); 
+			    $anchor.top = $anchor.top - 50;
+			    $('body').animate({ scrollTop: $anchor.top });
+			    return false;
+			});	
 
-		// Parallax factor (lower = more intense, higher = less intense).
-			parallaxFactor: 20
-
-		};
-
-		skel.breakpoints({
-			xlarge: '(max-width: 1800px)',
-			large: '(max-width: 1200px)',
-			medium: '(max-width: 992px)',
-			small: '(max-width: 768px)',
-			xsmall: '(max-width: 480px)'
-		});
-
-	//$(function() {
-
-		var $window = $(window),
-			$body = $('body'),
-			$containerLeft = $('#container-left'),
-			$footer = $('#footer'),
-			$main = $('#main');
-
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
-
-			$window.on('load', function() {
-				$body.removeClass('is-loading');
-			});
-
-		// Touch?
-			if (skel.vars.mobile) {
-
-				// Turn on touch mode.
-					$body.addClass('is-touch');
-
-				// Height fix (mostly for iOS).
-					window.setTimeout(function() {
-						$window.scrollTop($window.scrollTop() + 1);
-					}, 0);
-
+			function containerRightHeight() {
+				$("#container-left").css({ "height": $("#container-right").height() + 'px' });
 			}
 
-		// Fix: Placeholder polyfill.
-			//$('form').placeholder();
-
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
+			setTimeout(containerRightHeight);
+			$('.learnMore').on('click', function () {
+				setTimeout(containerRightHeight);
 			});
 
-		// Footer.
-			skel.on('+medium', function() {
-				$footer.insertAfter($main);
-			});
-
-			skel.on('-medium !medium', function() {
-				$footer.appendTo($containerLeft);
-			});
-
-		// Parallax background.
-
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (skel.vars.browser == 'ie'
-				||	skel.vars.mobile)
-					settings.parallax = false;
-
-			if (settings.parallax) {
-
-				skel.on('change', function() {
-
-					if (skel.breakpoint('medium').active) {
-
-						$window.off('scroll.strata_parallax');
-						$containerLeft.css('background-position', 'top left, center center');
-
-					}
-					else {
-
-						$containerLeft.css('background-position', 'left 0px');
-
-						$window.on('scroll.strata_parallax', function() {
-							$containerLeft.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-						});
-
-					}
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
+			var ypos, image;
+			function parallex() {
+				ypos = window.pageYOffset;
+				image = document.getElementById('container-left');
+				image.style.top = ypos * .7 +'px';
 			}
-		//});
+			window.addEventListener('scroll',parallex);
+		}
 
 		$('#right-presentation .learnMore').on('click', function (e) {
 			$('.presentation-text').toggleClass('ver-mais');
 			if($('.presentation-text').hasClass('ver-mais')) {
-				console.log('Ok');
 				$('#right-presentation .title, #right-presentation .learnMore').css({
 				    "opacity":"0"
 				}).animate({
@@ -152,7 +90,6 @@
 		$('#right-curriculum .learnMore').on('click', function (e) {
 			$('.curriculum-text').toggleClass('ver-mais');
 			if($('.curriculum-text').hasClass('ver-mais')) {
-				console.log('Ok');
 				$('#right-curriculum .title, #right-curriculum .learnMore').css({
 				    "opacity":"0"
 				}).animate({
@@ -184,15 +121,6 @@
 				$('#right-curriculum .learnMore').html('<p>Ver Mais</p>');
 			}
 		})
-	});
-
-	$(document).ready(function() {
-		$('.navbar-fixed-top ul.nav').find('a').click(function(){
-		    var $href = $(this).attr('href');
-		    var $anchor = $('#'+$href).offset();
-		    $('body').animate({ scrollTop: $anchor.top });
-		    return false;
-		});
 	});
 
 	// $(document).ready(function() {

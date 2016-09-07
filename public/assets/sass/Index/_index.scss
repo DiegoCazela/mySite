@@ -5,9 +5,10 @@ body {
 	width: 100%;
 	// div que engloba todo o conteudo do site
 	#container-body {
+		margin-top: 4%;
 		height: 100%;
 		width: 100%;
-		margin-top: 4%;
+		overflow: hidden;
 		// padding: 0;
 
 		main {
@@ -28,62 +29,28 @@ body {
 					
 					// div do lado esquerdo que engloba a foto e uma breve descricao
 					#container-left {
-					    // display: -moz-flex;
-					    // /* display: -webkit-flex; */
-					    // display: -ms-flex;
-					    /* display: flex; */
-					    // -moz-flex-direction: column;
-					    // /* -webkit-flex-direction: column; */
-					    // -ms-flex-direction: column;
-					    // /* flex-direction: column; */
-					    // -moz-align-items: -moz-flex-end;
-					    // -webkit-align-items: -webkit-flex-end;
-					    // -ms-align-items: -ms-flex-end;
-					    /* align-items: flex-end; */
-					    -moz-justify-content: space-between;
-					    /* -webkit-justify-content: space-between; */
-					    -ms-justify-content: space-between;
-					    justify-content: space-between;
-					    background-color: #1f1815;
-					    background-attachment: scroll,	fixed;
-					    background-image: url("../../img/overlay.png"), url("../../img/bg1.jpg");
-					    background-position: top left,	top left;
-					    background-repeat: repeat,	no-repeat;
-					    background-size: auto,	auto 100%;
-					    color: rgba(255, 255, 255, 0.5);
-					    /* height: 100% !important; */
-					    /* left: 0; */
-					    /* padding: 8em 4em; */
-					    /* position: fixed; */
-					    /* text-align: right; */
-					    /* top: 0; */
-					    /* width: 35%; */
-					    /* margin: 0; */
+					    background-image: url("../img/overlay.png"), url("../img/bg1.jpg");
 					    padding: 5%;
-					    padding-bottom: 2000px;
-					    height: 100%;
-					    /* background: #ccc; */
-					    
-						//float: left;
-					    // margin: 0;
-					    // padding: 5%;
-					    // height: 100%;
-					    // background: #ccc;
 
 						.left-photo {
 							text-align: center;
+							position: fixed;
 
 							img  {
-								width: 100px;
-							    height: 100px;
+								width: 125px;
+    							height: 125px;
 							    margin: auto auto 10% auto;
 							    border-radius: 50%;
-							    background: red;
 							}
 						}
 
 						.left-characteristics {
 							text-align: justify;
+							color: whitesmoke;
+							position: fixed;
+						    width: 25%;
+						    top: 40%;
+
 							h4 {
 							    margin: 0;
 							    padding: 0;
@@ -130,6 +97,7 @@ body {
 
 							.learnMore {
 							    width: 15%;
+							    display: inline-block;
 							    border: 1px solid;
 							    border-radius: 6px;
 							    text-align: center;
@@ -160,7 +128,7 @@ body {
 							.container-skills {
 									display: inline-block;
 								    text-align: center;
-								    margin: 4%;
+								    //margin: 4%;
 
 							    .skills-star  {
 							    	label i.fa:before  {
@@ -192,9 +160,9 @@ body {
 							// display: inline-block;
 							// width: 100%;
 
-							.container-portifolios {
+							// .container-portifolios {
 								.container-portifolios-part {
-									width: 50%;
+									//width: 50%;
 								    padding: 0 5% 5% 5%;
 								    // float: left;
 								    display: inline-block;
@@ -218,7 +186,7 @@ body {
 										}
 									}
 								}
-							}
+							// }
 
 							.learnMore {
 							    margin-left: 5%;
