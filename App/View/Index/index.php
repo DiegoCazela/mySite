@@ -7,7 +7,7 @@
 		<!-- estilo scss -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link rel="shortcut icon" type="image/png" href="assets/img/photo/5a6006f5393e5c28def04b4427daf6b9.jpeg"/>
+		<link rel="shortcut icon" type="image/png" href="assets/img/favicon/letra_d.png"/>
 		<link href="assets/stylesheets/styles.css" rel="stylesheet" />
 	</head>
 	
@@ -131,7 +131,7 @@
 										<!-- <div class='row'> -->
 											<?php 
 												foreach ($selectBasicSkills as $key => $value) :
-													$content_basic_skills_view .= "<div class='container-skills col-xs-4 col-sm-2'>";
+													$content_basic_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
 													$content_basic_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
 													$content_basic_skills_view .= 
 														"<div class='skills-star'>".
@@ -149,7 +149,7 @@
 												echo $content_basic_skills_view;
 
 												foreach ($selectIntermediateSkills as $key => $value) :
-													$content_intermediate_skills_view .= "<div class='container-skills col-xs-4 col-sm-2'>";
+													$content_intermediate_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
 													$content_intermediate_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
 													$content_intermediate_skills_view .= 
 														"<div class='skills-star'>".
@@ -167,7 +167,7 @@
 												echo $content_intermediate_skills_view;
 
 												foreach ($selectAdvancedSkills as $key => $value) :
-													$content_advanced_skills_view .= "<div class='container-skills col-xs-4 col-sm-2'>";
+													$content_advanced_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
 													$content_advanced_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
 													$content_advanced_skills_view .= 
 														"<div class='skills-star'>".
@@ -238,7 +238,16 @@
 												<button type='submit' class='btn btn-default'>Enviar</button>
 											</form>
 										</div>
-										<span class="container-myemail"><span class='glyphicon glyphicon-envelope'></span> cazela_dracena2005@hotmail.com</span>
+										<span class='container-contact'>
+											<div class='container-myphone'>
+												<span class='glyphicon glyphicon-earphone'></span>
+												<p>(18)99630-0677</p>
+											</div>
+											<div class='container-myemail'>
+												<span class='glyphicon glyphicon-envelope'></span> 
+												<p>diegocazela@gmail.com</p>
+											</div>
+										</span>
 								</section>
 							</div>
 						</section>

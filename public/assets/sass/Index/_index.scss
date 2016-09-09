@@ -90,8 +90,8 @@ body {
 				    			margin-bottom: 3%;
 
 								p {
-									margin: 0;
-									padding: 0;
+									// margin: 0;
+									// padding: 0;
 								}
 
 								.presentation-text, .curriculum-text{
@@ -135,7 +135,7 @@ body {
 
 						.right-skills {
 							.container-skills {
-									display: inline-block;
+									//display: inline-block;
 								    text-align: center;
 								    //margin: 4%;
 
@@ -157,7 +157,6 @@ body {
 									    &:before  {
 										  content:'\f005';
 										  color: #CCC;
-									    	
 									    }
 							    	}
 							    }
@@ -172,29 +171,38 @@ body {
 							// .container-portifolios {
 								.container-portifolios-part {
 									//width: 50%;
-								    padding: 0 5% 5% 5%;
+								    margin-bottom: 5%;
 								    // float: left;
-								    display: inline-block;
+								    //display: inline-block;
 								    text-align: center;
+							        min-height: 200px;
 
 									.portifolios-img {
-								        max-width: 200px;
-									    max-height: 125px;
-									    width: auto;
-									    height: auto;
-									    padding: 0;
-									    margin-bottom: 10%;
+								     //    max-width: 200px;
+									    // max-height: 125px;
+									    // width: auto;
+									    // height: auto;
+									    // padding: 0;
+									    // margin-bottom: 5%;
 									}
 
 									.portifolios-text {
-										text-align: center;
+										//text-align: center;
 
 										p {
-											margin: 0;
-											padding: 0;
+											// margin: 0;
+											// padding: 0;
 										}
 									}
+
+									&:nth-last-child(1), &:nth-last-child(2) {
+									    margin-bottom: 0;
+									}
 								}
+
+								// .container-portifolios-part:nth-last-child(2) {
+								//     margin-bottom: 0;
+								// }
 							// }
 
 							.learnMore {
@@ -203,9 +211,19 @@ body {
 						}
 
 						.right-contacts {
-							span.container-myemail {
+							// span.container-myemail {
+							// 	float: right;
+							// }
+							.container-contact {
 								float: right;
+
+								p {
+									display: inline-block;
+								    // padding: 0;
+								    // margin: 0;
+								}
 							}
+
 							button.btn-default {
 								margin-top: 1%;
 							}

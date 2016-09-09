@@ -96,11 +96,6 @@ body #container-body main .container .row #container-right .right-presentation .
   line-height: 30px;
   margin-bottom: 3%;
 }
-/* line 92, ../sass/Index/_index.scss */
-body #container-body main .container .row #container-right .right-presentation .text p, body #container-body main .container .row #container-right .right-curriculum .text p, body #container-body main .container .row #container-right .right-skills .text p, body #container-body main .container .row #container-right .right-portifolios .text p, body #container-body main .container .row #container-right .right-contacts .text p {
-  margin: 0;
-  padding: 0;
-}
 /* line 97, ../sass/Index/_index.scss */
 body #container-body main .container .row #container-right .right-presentation .text .presentation-text, body #container-body main .container .row #container-right .right-presentation .text .curriculum-text, body #container-body main .container .row #container-right .right-curriculum .text .presentation-text, body #container-body main .container .row #container-right .right-curriculum .text .curriculum-text, body #container-body main .container .row #container-right .right-skills .text .presentation-text, body #container-body main .container .row #container-right .right-skills .text .curriculum-text, body #container-body main .container .row #container-right .right-portifolios .text .presentation-text, body #container-body main .container .row #container-right .right-portifolios .text .curriculum-text, body #container-body main .container .row #container-right .right-contacts .text .presentation-text, body #container-body main .container .row #container-right .right-contacts .text .curriculum-text {
   -webkit-box-orient: vertical;
@@ -126,7 +121,6 @@ body #container-body main .container .row #container-right .right-presentation .
 }
 /* line 137, ../sass/Index/_index.scss */
 body #container-body main .container .row #container-right .right-skills .container-skills {
-  display: inline-block;
   text-align: center;
 }
 /* line 143, ../sass/Index/_index.scss */
@@ -149,39 +143,29 @@ body #container-body main .container .row #container-right .right-skills .contai
   content: '\f005';
   color: #CCC;
 }
-/* line 173, ../sass/Index/_index.scss */
+/* line 172, ../sass/Index/_index.scss */
 body #container-body main .container .row #container-right .right-portifolios .container-portifolios-part {
-  padding: 0 5% 5% 5%;
-  display: inline-block;
+  margin-bottom: 5%;
   text-align: center;
+  min-height: 200px;
 }
-/* line 180, ../sass/Index/_index.scss */
-body #container-body main .container .row #container-right .right-portifolios .container-portifolios-part .portifolios-img {
-  max-width: 200px;
-  max-height: 125px;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin-bottom: 10%;
+/* line 198, ../sass/Index/_index.scss */
+body #container-body main .container .row #container-right .right-portifolios .container-portifolios-part:nth-last-child(1), body #container-body main .container .row #container-right .right-portifolios .container-portifolios-part:nth-last-child(2) {
+  margin-bottom: 0;
 }
-/* line 189, ../sass/Index/_index.scss */
-body #container-body main .container .row #container-right .right-portifolios .container-portifolios-part .portifolios-text {
-  text-align: center;
-}
-/* line 192, ../sass/Index/_index.scss */
-body #container-body main .container .row #container-right .right-portifolios .container-portifolios-part .portifolios-text p {
-  margin: 0;
-  padding: 0;
-}
-/* line 200, ../sass/Index/_index.scss */
+/* line 208, ../sass/Index/_index.scss */
 body #container-body main .container .row #container-right .right-portifolios .learnMore {
   margin-left: 5%;
 }
-/* line 206, ../sass/Index/_index.scss */
-body #container-body main .container .row #container-right .right-contacts span.container-myemail {
+/* line 217, ../sass/Index/_index.scss */
+body #container-body main .container .row #container-right .right-contacts .container-contact {
   float: right;
 }
-/* line 209, ../sass/Index/_index.scss */
+/* line 220, ../sass/Index/_index.scss */
+body #container-body main .container .row #container-right .right-contacts .container-contact p {
+  display: inline-block;
+}
+/* line 227, ../sass/Index/_index.scss */
 body #container-body main .container .row #container-right .right-contacts button.btn-default {
   margin-top: 1%;
 }
