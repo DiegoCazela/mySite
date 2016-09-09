@@ -41,7 +41,6 @@ body #container-body main .container .row {
 body #container-body main .container .row #container-left {
   background-image: url("../img/overlay.png"), url("../img/bg1.jpg");
   padding: 5%;
-  height: 400px;
 }
 /* line 39, ../sass/Index/_index.scss */
 body #container-body main .container .row #container-left .left-photo {
