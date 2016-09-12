@@ -127,64 +127,61 @@
 												Habilidades
 											</h1>
 										</div>
+										<?php 
+											foreach ($selectBasicSkills as $key => $value) :
+												$content_basic_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
+												$content_basic_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
+												$content_basic_skills_view .= 
+													"<div class='skills-star'>".
+														"<label for='cm_star-1'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-2'>".
+															"<i class='fb'></i>".
+														"</label>".
+														"<label for='cm_star-3'>".
+															"<i class='fb'></i>".
+														"</label>".
+													"</div></div>";
+											endforeach;
+											echo $content_basic_skills_view;
 
-										<!-- <div class='row'> -->
-											<?php 
-												foreach ($selectBasicSkills as $key => $value) :
-													$content_basic_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
-													$content_basic_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
-													$content_basic_skills_view .= 
-														"<div class='skills-star'>".
-															"<label for='cm_star-1'>".
-																"<i class='fa'></i>".
-															"</label>".
-															"<label for='cm_star-2'>".
-																"<i class='fb'></i>".
-															"</label>".
-															"<label for='cm_star-3'>".
-																"<i class='fb'></i>".
-															"</label>".
-														"</div></div>";
-												endforeach;
-												echo $content_basic_skills_view;
+											foreach ($selectIntermediateSkills as $key => $value) :
+												$content_intermediate_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
+												$content_intermediate_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
+												$content_intermediate_skills_view .= 
+													"<div class='skills-star'>".
+														"<label for='cm_star-1'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-2'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-3'>".
+															"<i class='fb'></i>".
+														"</label>".
+													"</div></div>";
+											endforeach;
+											echo $content_intermediate_skills_view;
 
-												foreach ($selectIntermediateSkills as $key => $value) :
-													$content_intermediate_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
-													$content_intermediate_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
-													$content_intermediate_skills_view .= 
-														"<div class='skills-star'>".
-															"<label for='cm_star-1'>".
-																"<i class='fa'></i>".
-															"</label>".
-															"<label for='cm_star-2'>".
-																"<i class='fa'></i>".
-															"</label>".
-															"<label for='cm_star-3'>".
-																"<i class='fb'></i>".
-															"</label>".
-														"</div></div>";
-												endforeach;
-												echo $content_intermediate_skills_view;
-
-												foreach ($selectAdvancedSkills as $key => $value) :
-													$content_advanced_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
-													$content_advanced_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
-													$content_advanced_skills_view .= 
-														"<div class='skills-star'>".
-															"<label for='cm_star-1'>".
-																"<i class='fa'></i>".
-															"</label>".
-															"<label for='cm_star-2'>".
-																"<i class='fa'></i>".
-															"</label>".
-															"<label for='cm_star-3'>".
-																"<i class='fa'></i>".
-															"</label>".
-														"</div></div>";
-												endforeach;
-												echo $content_advanced_skills_view;
-											?>
-										<!-- </div> -->
+											foreach ($selectAdvancedSkills as $key => $value) :
+												$content_advanced_skills_view .= "<div class='container-skills col-xs-3 col-sm-2'>";
+												$content_advanced_skills_view .= "<div class='skills-text'><p>" . $value->content_skills_text . "</p></div>";
+												$content_advanced_skills_view .= 
+													"<div class='skills-star'>".
+														"<label for='cm_star-1'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-2'>".
+															"<i class='fa'></i>".
+														"</label>".
+														"<label for='cm_star-3'>".
+															"<i class='fa'></i>".
+														"</label>".
+													"</div></div>";
+											endforeach;
+											echo $content_advanced_skills_view;
+										?>
 									</div>
 								</section>
 
@@ -196,21 +193,16 @@
 												Portfólio
 											</h1>
 										</div>
-									<!-- <div class='container'> -->
-											<!-- <div class="container-portifolios"> -->
-												<!-- projeto -->
-												<?php
-													foreach ($selectPortifolio as $key => $value) :
-														$content_portifolio_view = "<article class='container-portifolios-part col-xs-12 col-sm-6'>";
-														$content_portifolio_view .= "<img src='/assets/img/portifolio/" . $value->content_portifolios_name . "' alt='Smiley face' class='img-rounded portifolios-img'/>";
-														$content_portifolio_view .= "<div class='portifolios-text'><p>" . $value->content_portifolios_text . "</p></div>";
-														$content_portifolio_view .= "</article>";
-														echo $content_portifolio_view;
-													endforeach;
-												?>
-											<!-- </div> -->
-										</div>
-									<!-- </div> -->
+										<?php
+											foreach ($selectPortifolio as $key => $value) :
+												$content_portifolio_view = "<article class='container-portifolios-part col-xs-12 col-sm-6'>";
+												$content_portifolio_view .= "<img src='/assets/img/portifolio/" . $value->content_portifolios_name . "' alt='Smiley face' class='img-rounded portifolios-img'/>";
+												$content_portifolio_view .= "<div class='portifolios-text'><p>" . $value->content_portifolios_text . "</p></div>";
+												$content_portifolio_view .= "</article>";
+												echo $content_portifolio_view;
+											endforeach;
+										?>
+									</div>
 								</section>
 
 								<!-- div do contato -->
@@ -260,7 +252,6 @@
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!-- <script src="assets/js/skel.min.js"></script> -->
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>

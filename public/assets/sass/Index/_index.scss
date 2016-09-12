@@ -12,7 +12,6 @@ body {
 		height: 100%;
 		width: 100%;
 		overflow: hidden;
-		// padding: 0;
 
 		main {
 			margin: 0;
@@ -34,7 +33,6 @@ body {
 					#container-left {
 					    background-image: url("../img/overlay.png"), url("../img/bg1.jpg");
 					    padding: 5%;
-					    // height: 400px;
 
 						.left-photo {
 							text-align: center;
@@ -72,8 +70,6 @@ body {
 						// div da apresentacao, div do curriculum, div das habilidades, div dos portifolios, div do contato
 						.right-presentation, .right-curriculum, .right-skills, .right-portifolios, .right-contacts {
 							padding: 5%;
-							// display: inline-block;
-							// width: 100%;
 
 							.title {
 								text-align: center;
@@ -88,11 +84,6 @@ body {
 							.text {
 							    line-height: 30px;
 				    			margin-bottom: 3%;
-
-								p {
-									// margin: 0;
-									// padding: 0;
-								}
 
 								.presentation-text, .curriculum-text{
 								    -webkit-box-orient: vertical;
@@ -120,24 +111,9 @@ body {
 							}
 						}
 
-						// .right-presentation, .right-curriculum  {
-						// 	.text  {
-						// 		.presentation-text, .curriculum-text  {
-						// 		    -webkit-box-orient: vertical;
-						// 		    display: block;
-						// 		    display: -webkit-box;
-						// 		    -webkit-line-clamp: 5;
-						// 		    overflow: hidden;
-						// 		    text-overflow: ellipsis;
-						// 		}
-						// 	}	
-						// }
-
 						.right-skills {
 							.container-skills {
-									//display: inline-block;
 								    text-align: center;
-								    //margin: 4%;
 
 							    .skills-star  {
 							    	label i.fa:before  {
@@ -165,45 +141,16 @@ body {
 
 						// div dos portifolios
 						.right-portifolios {
-							// display: inline-block;
-							// width: 100%;
-
 							// .container-portifolios {
 								.container-portifolios-part {
-									//width: 50%;
 								    margin-bottom: 5%;
-								    // float: left;
-								    //display: inline-block;
 								    text-align: center;
 							        min-height: 200px;
-
-									.portifolios-img {
-								     //    max-width: 200px;
-									    // max-height: 125px;
-									    // width: auto;
-									    // height: auto;
-									    // padding: 0;
-									    // margin-bottom: 5%;
-									}
-
-									.portifolios-text {
-										//text-align: center;
-
-										p {
-											// margin: 0;
-											// padding: 0;
-										}
-									}
 
 									&:nth-last-child(1), &:nth-last-child(2) {
 									    margin-bottom: 0;
 									}
 								}
-
-								// .container-portifolios-part:nth-last-child(2) {
-								//     margin-bottom: 0;
-								// }
-							// }
 
 							.learnMore {
 							    margin-left: 5%;
@@ -211,16 +158,11 @@ body {
 						}
 
 						.right-contacts {
-							// span.container-myemail {
-							// 	float: right;
-							// }
 							.container-contact {
 								float: right;
 
 								p {
 									display: inline-block;
-								    // padding: 0;
-								    // margin: 0;
 								}
 							}
 
